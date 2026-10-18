@@ -1,0 +1,155 @@
+
+/* 1. General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* 2. Header */
+header {
+    background-color: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    color: #dbeafe;
+}
+
+/* 3. Main content */
+main {
+    width: min(900px, 92%);
+    margin: 35px auto;
+}
+
+section {
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+/* 4. Load Users button */
+button {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* 5. Status message */
+#status {
+    margin: 18px 0;
+    padding: 12px;
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+}
+
+/* 6. Search input */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="search"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 22px;
+}
+
+input[type="search"]:focus {
+    border-color: #2563eb;
+}
+
+/* 7. User list */
+#users-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+#users-list li {
+    padding: 18px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+#users-list li h3 {
+    margin: 0 0 12px;
+    color: #1d4ed8;
+    font-size: 1.1rem;
+}
+
+#users-list li p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* 8. Responsive layout */
+@media (max-width: 500px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #users-list {
+        grid-template-columns: 1fr;
+    }
+}
